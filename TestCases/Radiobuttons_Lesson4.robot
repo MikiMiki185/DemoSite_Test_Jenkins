@@ -21,4 +21,6 @@ ${url}      https://demoqa.com/automation-practice-form
     click element   xpath://*[@id="hobbiesWrapper"]/div[2]/div[1]/label
     click element   xpath://*[@id="hobbiesWrapper"]/div[2]/div[2]/label
     click element   xpath://*[@id="hobbiesWrapper"]/div[2]/div[3]/label
+5. Unselect hobbie.
+    click element   xpath://*[@id="hobbiesWrapper"]/div[2]/div[3]/label
     sleep    2

@@ -20,11 +20,10 @@ ${url}      https://demo.automationtesting.in/Register.html
     input text    xpath://*[@id="eid"]/input    baltazargembka@jakistammail.com
     input text    xpath://*[@id="basicBootstrapForm"]/div[4]/div/input      510510510
 
-#    select radio button     radiooptions  FeMale
-    click element   xpath://*[@id="basicBootstrapForm"]/div[5]/div/label[2]/input
+    select radio button     radiooptions  FeMale
 
-#    select checkbox     id:checkbox1
-#    select checkbox     id:checkbox2
-#    select checkbox     id:checkbox3
-    click element   xpath://*[@id="checkbox2"]
+    select checkbox     id:checkbox1
+    select checkbox     id:checkbox2
+    select checkbox     id:checkbox3
+    unselect checkbox    id:checkbox3
     sleep    5

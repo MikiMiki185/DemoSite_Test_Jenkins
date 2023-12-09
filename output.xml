@@ -1,90 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231209 18:48:00.894" rpa="false" schemaversion="4">
-<suite id="s1" name="Radiobuttons" source="D:\RobotFramework2023_December\1\TestCases\Radiobuttons.robot">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231209 19:10:12.849" rpa="false" schemaversion="4">
+<suite id="s1" name="Radiobuttons Lesson4" source="D:\RobotFramework2023_December\1\TestCases\Radiobuttons_Lesson4.robot">
 <test id="s1-t1" name="1. Open browser." line="11">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231209 18:48:01.411" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
-<status status="PASS" starttime="20231209 18:48:01.410" endtime="20231209 18:48:09.270"/>
+<msg timestamp="20231209 19:10:13.348" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
+<status status="PASS" starttime="20231209 19:10:13.346" endtime="20231209 19:10:19.665"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231209 18:48:09.273" endtime="20231209 18:48:09.639"/>
+<status status="PASS" starttime="20231209 19:10:19.667" endtime="20231209 19:10:19.999"/>
 </kw>
-<status status="PASS" starttime="20231209 18:48:01.409" endtime="20231209 18:48:09.640"/>
+<status status="PASS" starttime="20231209 19:10:13.344" endtime="20231209 19:10:20.021"/>
 </test>
 <test id="s1-t2" name="2. Input personal data." line="14">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:firstName</arg>
 <arg>Baltazar</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231209 18:48:09.644" level="INFO">Typing text 'Baltazar' into text field 'id:firstName'.</msg>
-<status status="PASS" starttime="20231209 18:48:09.643" endtime="20231209 18:48:10.318"/>
+<msg timestamp="20231209 19:10:20.375" level="INFO">Typing text 'Baltazar' into text field 'id:firstName'.</msg>
+<status status="PASS" starttime="20231209 19:10:20.373" endtime="20231209 19:10:20.871"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:lastName</arg>
 <arg>Gembka</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231209 18:48:10.323" level="INFO">Typing text 'Gembka' into text field 'id:lastName'.</msg>
-<status status="PASS" starttime="20231209 18:48:10.321" endtime="20231209 18:48:10.552"/>
+<msg timestamp="20231209 19:10:20.874" level="INFO">Typing text 'Gembka' into text field 'id:lastName'.</msg>
+<status status="PASS" starttime="20231209 19:10:20.872" endtime="20231209 19:10:21.266"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:userEmail</arg>
 <arg>baltazargembka@jakistammail.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231209 18:48:10.560" level="INFO">Typing text 'baltazargembka@jakistammail.com' into text field 'id:userEmail'.</msg>
-<status status="PASS" starttime="20231209 18:48:10.559" endtime="20231209 18:48:10.818"/>
+<msg timestamp="20231209 19:10:21.275" level="INFO">Typing text 'baltazargembka@jakistammail.com' into text field 'id:userEmail'.</msg>
+<status status="PASS" starttime="20231209 19:10:21.273" endtime="20231209 19:10:21.515"/>
 </kw>
-<status status="PASS" starttime="20231209 18:48:09.641" endtime="20231209 18:48:10.820"/>
+<status status="PASS" starttime="20231209 19:10:20.371" endtime="20231209 19:10:21.516"/>
 </test>
 <test id="s1-t3" name="3. Select gender." line="18">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath://*[@id="genterWrapper"]/div[2]/div[2]/label</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231209 18:48:10.825" level="INFO">Clicking element 'xpath://*[@id="genterWrapper"]/div[2]/div[2]/label'.</msg>
-<status status="PASS" starttime="20231209 18:48:10.824" endtime="20231209 18:48:10.924"/>
+<msg timestamp="20231209 19:10:21.523" level="INFO">Clicking element 'xpath://*[@id="genterWrapper"]/div[2]/div[2]/label'.</msg>
+<status status="PASS" starttime="20231209 19:10:21.522" endtime="20231209 19:10:21.639"/>
 </kw>
-<status status="PASS" starttime="20231209 18:48:10.824" endtime="20231209 18:48:10.925"/>
+<status status="PASS" starttime="20231209 19:10:21.521" endtime="20231209 19:10:21.640"/>
 </test>
 <test id="s1-t4" name="4. Selecet hobbies." line="20">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath://*[@id="hobbiesWrapper"]/div[2]/div[1]/label</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231209 18:48:10.927" level="INFO">Clicking element 'xpath://*[@id="hobbiesWrapper"]/div[2]/div[1]/label'.</msg>
-<status status="PASS" starttime="20231209 18:48:10.926" endtime="20231209 18:48:11.016"/>
+<msg timestamp="20231209 19:10:21.644" level="INFO">Clicking element 'xpath://*[@id="hobbiesWrapper"]/div[2]/div[1]/label'.</msg>
+<status status="PASS" starttime="20231209 19:10:21.643" endtime="20231209 19:10:21.755"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath://*[@id="hobbiesWrapper"]/div[2]/div[2]/label</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231209 18:48:11.017" level="INFO">Clicking element 'xpath://*[@id="hobbiesWrapper"]/div[2]/div[2]/label'.</msg>
-<status status="PASS" starttime="20231209 18:48:11.017" endtime="20231209 18:48:11.104"/>
+<msg timestamp="20231209 19:10:21.758" level="INFO">Clicking element 'xpath://*[@id="hobbiesWrapper"]/div[2]/div[2]/label'.</msg>
+<status status="PASS" starttime="20231209 19:10:21.756" endtime="20231209 19:10:21.859"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath://*[@id="hobbiesWrapper"]/div[2]/div[3]/label</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231209 18:48:11.105" level="INFO">Clicking element 'xpath://*[@id="hobbiesWrapper"]/div[2]/div[3]/label'.</msg>
-<status status="PASS" starttime="20231209 18:48:11.104" endtime="20231209 18:48:11.182"/>
+<msg timestamp="20231209 19:10:21.861" level="INFO">Clicking element 'xpath://*[@id="hobbiesWrapper"]/div[2]/div[3]/label'.</msg>
+<status status="PASS" starttime="20231209 19:10:21.860" endtime="20231209 19:10:21.946"/>
+</kw>
+<status status="PASS" starttime="20231209 19:10:21.642" endtime="20231209 19:10:21.947"/>
+</test>
+<test id="s1-t5" name="5. Unselect hobbie." line="24">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="hobbiesWrapper"]/div[2]/div[3]/label</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231209 19:10:21.949" level="INFO">Clicking element 'xpath://*[@id="hobbiesWrapper"]/div[2]/div[3]/label'.</msg>
+<status status="PASS" starttime="20231209 19:10:21.949" endtime="20231209 19:10:22.027"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231209 18:48:13.184" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20231209 18:48:11.183" endtime="20231209 18:48:13.184"/>
+<msg timestamp="20231209 19:10:24.029" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231209 19:10:22.028" endtime="20231209 19:10:24.029"/>
 </kw>
-<status status="PASS" starttime="20231209 18:48:10.926" endtime="20231209 18:48:13.185"/>
+<status status="PASS" starttime="20231209 19:10:21.949" endtime="20231209 19:10:24.030"/>
 </test>
-<status status="PASS" starttime="20231209 18:48:00.897" endtime="20231209 18:48:13.192"/>
+<status status="PASS" starttime="20231209 19:10:12.853" endtime="20231209 19:10:24.033"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0" skip="0">All Tests</stat>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="4" fail="0" skip="0" id="s1" name="Radiobuttons">Radiobuttons</stat>
+<stat pass="5" fail="0" skip="0" id="s1" name="Radiobuttons Lesson4">Radiobuttons Lesson4</stat>
 </suite>
 </statistics>
 <errors>
