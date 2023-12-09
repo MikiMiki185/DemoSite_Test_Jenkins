@@ -1,83 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231208 15:49:08.945" rpa="false" schemaversion="4">
-<suite id="s1" name="Inputbox" source="D:\RobotFramework2023_December\1\TestCases\Inputbox.robot">
-<test id="s1-t1" name="TestingInputBox" line="8">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231209 18:48:00.894" rpa="false" schemaversion="4">
+<suite id="s1" name="Radiobuttons" source="D:\RobotFramework2023_December\1\TestCases\Radiobuttons.robot">
+<test id="s1-t1" name="1. Open browser." line="11">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231208 15:49:09.434" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
-<status status="PASS" starttime="20231208 15:49:09.433" endtime="20231208 15:49:13.783"/>
+<msg timestamp="20231209 18:48:01.411" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
+<status status="PASS" starttime="20231209 18:48:01.410" endtime="20231209 18:48:09.270"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231208 15:49:13.797" endtime="20231208 15:49:14.184"/>
+<status status="PASS" starttime="20231209 18:48:09.273" endtime="20231209 18:48:09.639"/>
 </kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>nopCommerce demo store1</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20231208 15:49:14.693" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20231208 15:49:14.693" level="FAIL">Title should have been 'nopCommerce demo store1' but was 'nopCommerce demo store'.</msg>
-<status status="FAIL" starttime="20231208 15:49:14.185" endtime="20231208 15:49:14.701"/>
-</kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>xpath:/html/body/div[@class='master-wrapper-page']//div[@class='header-links']/ul//a[@href='/login?returnUrl=%2F']</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231208 15:49:14.701" endtime="20231208 15:49:14.702"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${"email_txt"}</var>
-<arg>id:Email</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20231208 15:49:14.702" endtime="20231208 15:49:14.702"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${"email_txt"}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20231208 15:49:14.703" endtime="20231208 15:49:14.703"/>
-</kw>
-<kw name="Element Should Be Enabled" library="SeleniumLibrary">
-<arg>${"email_txt"}</arg>
-<doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<status status="NOT RUN" starttime="20231208 15:49:14.704" endtime="20231208 15:49:14.704"/>
+<status status="PASS" starttime="20231209 18:48:01.409" endtime="20231209 18:48:09.640"/>
+</test>
+<test id="s1-t2" name="2. Input personal data." line="14">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:firstName</arg>
+<arg>Baltazar</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231209 18:48:09.644" level="INFO">Typing text 'Baltazar' into text field 'id:firstName'.</msg>
+<status status="PASS" starttime="20231209 18:48:09.643" endtime="20231209 18:48:10.318"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${"email_txt"}</arg>
-<arg>JohnDavid@gmail.com</arg>
+<arg>id:lastName</arg>
+<arg>Gembka</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231208 15:49:14.705" endtime="20231208 15:49:14.705"/>
+<msg timestamp="20231209 18:48:10.323" level="INFO">Typing text 'Gembka' into text field 'id:lastName'.</msg>
+<status status="PASS" starttime="20231209 18:48:10.321" endtime="20231209 18:48:10.552"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20231208 15:49:14.706" endtime="20231208 15:49:14.706"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:userEmail</arg>
+<arg>baltazargembka@jakistammail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231209 18:48:10.560" level="INFO">Typing text 'baltazargembka@jakistammail.com' into text field 'id:userEmail'.</msg>
+<status status="PASS" starttime="20231209 18:48:10.559" endtime="20231209 18:48:10.818"/>
 </kw>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>${"email_txt"}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231208 15:49:14.707" endtime="20231208 15:49:14.707"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20231208 15:49:14.707" endtime="20231208 15:49:14.707"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20231208 15:49:14.708" endtime="20231208 15:49:14.708"/>
-</kw>
-<status status="FAIL" starttime="20231208 15:49:09.432" endtime="20231208 15:49:14.709">Title should have been 'nopCommerce demo store1' but was 'nopCommerce demo store'.</status>
+<status status="PASS" starttime="20231209 18:48:09.641" endtime="20231209 18:48:10.820"/>
 </test>
-<status status="FAIL" starttime="20231208 15:49:08.947" endtime="20231208 15:49:14.711"/>
+<test id="s1-t3" name="3. Select gender." line="18">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="genterWrapper"]/div[2]/div[2]/label</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231209 18:48:10.825" level="INFO">Clicking element 'xpath://*[@id="genterWrapper"]/div[2]/div[2]/label'.</msg>
+<status status="PASS" starttime="20231209 18:48:10.824" endtime="20231209 18:48:10.924"/>
+</kw>
+<status status="PASS" starttime="20231209 18:48:10.824" endtime="20231209 18:48:10.925"/>
+</test>
+<test id="s1-t4" name="4. Selecet hobbies." line="20">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="hobbiesWrapper"]/div[2]/div[1]/label</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231209 18:48:10.927" level="INFO">Clicking element 'xpath://*[@id="hobbiesWrapper"]/div[2]/div[1]/label'.</msg>
+<status status="PASS" starttime="20231209 18:48:10.926" endtime="20231209 18:48:11.016"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="hobbiesWrapper"]/div[2]/div[2]/label</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231209 18:48:11.017" level="INFO">Clicking element 'xpath://*[@id="hobbiesWrapper"]/div[2]/div[2]/label'.</msg>
+<status status="PASS" starttime="20231209 18:48:11.017" endtime="20231209 18:48:11.104"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="hobbiesWrapper"]/div[2]/div[3]/label</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231209 18:48:11.105" level="INFO">Clicking element 'xpath://*[@id="hobbiesWrapper"]/div[2]/div[3]/label'.</msg>
+<status status="PASS" starttime="20231209 18:48:11.104" endtime="20231209 18:48:11.182"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231209 18:48:13.184" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231209 18:48:11.183" endtime="20231209 18:48:13.184"/>
+</kw>
+<status status="PASS" starttime="20231209 18:48:10.926" endtime="20231209 18:48:13.185"/>
+</test>
+<status status="PASS" starttime="20231209 18:48:00.897" endtime="20231209 18:48:13.192"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Inputbox">Inputbox</stat>
+<stat pass="4" fail="0" skip="0" id="s1" name="Radiobuttons">Radiobuttons</stat>
 </suite>
 </statistics>
 <errors>
