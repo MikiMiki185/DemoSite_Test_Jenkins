@@ -1,90 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231220 23:43:35.192" rpa="false" schemaversion="4">
-<suite id="s1" name="9 SwitchToMultipleTests" source="D:\RobotFramework2023_December\1\TestCases\9_SwitchToMultipleTests.robot">
-<test id="s1-t1" name="SwitchToMultipleTests" line="6">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231220 23:58:03.338" rpa="false" schemaversion="4">
+<suite id="s1" name="10 NavigationalKeywords" source="D:\RobotFramework2023_December\1\TestCases\10_NavigationalKeywords.robot">
+<test id="s1-t1" name="NavigationTest" line="5">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://www.google.com/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231220 23:43:35.575" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
-<msg timestamp="20231220 23:43:36.684" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.110); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
-<status status="PASS" starttime="20231220 23:43:35.575" endtime="20231220 23:43:39.142"/>
+<msg timestamp="20231220 23:58:05.802" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<msg timestamp="20231220 23:58:10.912" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.110); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20231220 23:58:05.783" endtime="20231220 23:58:17.378"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231220 23:43:39.200" endtime="20231220 23:43:40.589"/>
+<status status="PASS" starttime="20231220 23:58:17.419" endtime="20231220 23:58:17.923"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231220 23:43:42.594" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20231220 23:43:40.593" endtime="20231220 23:43:42.594"/>
+<msg timestamp="20231220 23:58:19.966" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231220 23:58:17.964" endtime="20231220 23:58:19.966"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>xpath: //*[@id="W0wltc"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231220 23:43:42.596" level="INFO">Clicking button 'xpath: //*[@id="W0wltc"]'.</msg>
-<status status="PASS" starttime="20231220 23:43:42.595" endtime="20231220 23:43:42.714"/>
+<msg timestamp="20231220 23:58:19.971" level="INFO">Clicking button 'xpath: //*[@id="W0wltc"]'.</msg>
+<status status="PASS" starttime="20231220 23:58:19.970" endtime="20231220 23:58:20.314"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${loc}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20231220 23:58:20.341" level="INFO">${loc} = https://www.google.com/</msg>
+<status status="PASS" starttime="20231220 23:58:20.317" endtime="20231220 23:58:20.341"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${loc}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231220 23:58:20.362" endtime="20231220 23:58:20.375"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.bing.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231220 23:58:20.380" level="INFO">Opening url 'https://www.bing.com/'</msg>
+<status status="PASS" starttime="20231220 23:58:20.379" endtime="20231220 23:58:21.382"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${loc}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20231220 23:58:21.431" level="INFO">${loc} = https://www.bing.com/</msg>
+<status status="PASS" starttime="20231220 23:58:21.400" endtime="20231220 23:58:21.431"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${loc}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231220 23:58:21.457" endtime="20231220 23:58:21.464"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20231220 23:58:21.889" endtime="20231220 23:58:27.173"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231220 23:43:44.715" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20231220 23:43:42.715" endtime="20231220 23:43:44.715"/>
+<msg timestamp="20231220 23:58:29.185" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231220 23:58:27.182" endtime="20231220 23:58:29.185"/>
 </kw>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://www.bing.com</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231220 23:43:44.716" level="INFO">Opening browser 'chrome' to base url 'https://www.bing.com'.</msg>
-<msg timestamp="20231220 23:43:45.772" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.110); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
-<status status="PASS" starttime="20231220 23:43:44.715" endtime="20231220 23:43:48.506"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231220 23:43:48.572" endtime="20231220 23:43:49.531"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231220 23:43:51.588" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20231220 23:43:49.586" endtime="20231220 23:43:51.588"/>
-</kw>
-<kw name="Switch Browser" library="SeleniumLibrary">
-<arg>1</arg>
-<doc>Switches between active browsers using ``index_or_alias``.</doc>
-<status status="PASS" starttime="20231220 23:43:51.589" endtime="20231220 23:43:51.590"/>
-</kw>
-<kw name="Get Title" library="SeleniumLibrary">
-<var>${title}</var>
-<doc>Returns the title of the current page.</doc>
-<msg timestamp="20231220 23:43:51.601" level="INFO">${title} = Google</msg>
-<status status="PASS" starttime="20231220 23:43:51.592" endtime="20231220 23:43:51.601"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${title}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231220 23:43:51.602" endtime="20231220 23:43:51.604"/>
-</kw>
-<kw name="Switch Browser" library="SeleniumLibrary">
-<arg>2</arg>
-<doc>Switches between active browsers using ``index_or_alias``.</doc>
-<status status="PASS" starttime="20231220 23:43:51.606" endtime="20231220 23:43:51.607"/>
-</kw>
-<kw name="Get Title" library="SeleniumLibrary">
-<var>${title2}</var>
-<doc>Returns the title of the current page.</doc>
-<msg timestamp="20231220 23:43:51.621" level="INFO">${title2} = Bing</msg>
-<status status="PASS" starttime="20231220 23:43:51.607" endtime="20231220 23:43:51.621"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${title2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231220 23:43:51.622" endtime="20231220 23:43:51.623"/>
-</kw>
-<status status="PASS" starttime="20231220 23:43:35.573" endtime="20231220 23:43:51.624"/>
+<status status="PASS" starttime="20231220 23:58:05.777" endtime="20231220 23:58:29.188"/>
 </test>
-<status status="PASS" starttime="20231220 23:43:35.195" endtime="20231220 23:43:51.626"/>
+<status status="PASS" starttime="20231220 23:58:03.341" endtime="20231220 23:58:29.194"/>
 </suite>
 <statistics>
 <total>
@@ -93,11 +75,10 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="9 SwitchToMultipleTests">9 SwitchToMultipleTests</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="10 NavigationalKeywords">10 NavigationalKeywords</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20231220 23:43:36.684" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.110); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg timestamp="20231220 23:43:45.772" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.110); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg timestamp="20231220 23:58:10.912" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.110); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
