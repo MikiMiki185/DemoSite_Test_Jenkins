@@ -1,98 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231221 17:51:23.617" rpa="false" schemaversion="4">
-<suite id="s1" name="13 Userkeywords" source="D:\RobotFramework2023_December\1\TestCases\13_Userkeywords.robot">
-<test id="s1-t1" name="TC1" line="12">
-<kw name="Lanuch browser" library="resources">
-<var>${PageTitle}</var>
-<arg>${url}</arg>
-<arg>${browser}</arg>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231221 18:46:17.260" rpa="false" schemaversion="4">
+<suite id="s1" name="14 ScrollingPage" source="D:\RobotFramework2023_December\1\TestCases\14_ScrollingPage.robot">
+<test id="s1-t1" name="ScrollingTest" line="5">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${appurl}</arg>
-<arg>${appbrowser}</arg>
+<arg>https://www.countries-ofthe-world.com/flags-of-the-world.html</arg>
+<arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231221 17:51:24.037" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com'.</msg>
-<msg timestamp="20231221 17:51:26.000" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.110); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
-<status status="PASS" starttime="20231221 17:51:24.037" endtime="20231221 17:51:35.716"/>
+<msg timestamp="20231221 18:46:17.687" level="INFO">Opening browser 'chrome' to base url 'https://www.countries-ofthe-world.com/flags-of-the-world.html'.</msg>
+<msg timestamp="20231221 18:46:18.881" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.110); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20231221 18:46:17.686" endtime="20231221 18:46:21.964"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231221 17:51:35.716" endtime="20231221 17:51:35.871"/>
+<status status="PASS" starttime="20231221 18:46:21.967" endtime="20231221 18:46:23.157"/>
 </kw>
-<kw name="Get Title" library="SeleniumLibrary">
-<var>${title}</var>
-<doc>Returns the title of the current page.</doc>
-<msg timestamp="20231221 17:51:35.904" level="INFO">${title} = OrangeHRM</msg>
-<status status="PASS" starttime="20231221 17:51:35.871" endtime="20231221 17:51:35.905"/>
-</kw>
-<msg timestamp="20231221 17:51:35.905" level="INFO">${PageTitle} = OrangeHRM</msg>
-<status status="PASS" starttime="20231221 17:51:24.036" endtime="20231221 17:51:35.905"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${PageTitle}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 17:51:35.916" endtime="20231221 17:51:35.919"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${PageTitle}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20231221 17:51:35.922" level="INFO">OrangeHRM</msg>
-<status status="PASS" starttime="20231221 17:51:35.922" endtime="20231221 17:51:35.923"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231221 17:51:37.934" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20231221 17:51:35.932" endtime="20231221 17:51:37.934"/>
-</kw>
-<kw name="Login to sytem" library="resources">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name: username</arg>
-<arg>${login}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231221 17:51:37.938" level="INFO">Typing text 'Admin' into text field 'name: username'.</msg>
-<status status="PASS" starttime="20231221 17:51:37.936" endtime="20231221 17:51:38.095"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>name: password</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20231221 17:51:38.097" level="INFO">Typing password into text field 'name: password'.</msg>
-<msg timestamp="20231221 17:51:38.144" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20231221 17:51:38.235" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20231221 17:51:38.095" endtime="20231221 17:51:38.235"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath: /html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231221 17:51:38.236" level="INFO">Clicking button 'xpath: /html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button'.</msg>
-<status status="PASS" starttime="20231221 17:51:38.236" endtime="20231221 17:51:38.331"/>
-</kw>
-<status status="PASS" starttime="20231221 17:51:37.935" endtime="20231221 17:51:38.331"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231221 17:51:40.333" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20231221 17:51:38.332" endtime="20231221 17:51:40.333"/>
-</kw>
-<kw name="Create screenshot page" library="resources">
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<arg>Keywords.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231221 17:51:40.623" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Keywords.png"&gt;&lt;img src="Keywords.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231221 17:51:40.334" endtime="20231221 17:51:40.623"/>
-</kw>
-<status status="PASS" starttime="20231221 17:51:40.334" endtime="20231221 17:51:40.624"/>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,-document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231221 18:46:23.158" level="INFO">Executing JavaScript:
+window.scrollTo(0,-document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20231221 18:46:23.158" endtime="20231221 18:46:23.172"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231221 17:51:43.628" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20231221 17:51:40.627" endtime="20231221 17:51:43.628"/>
+<msg timestamp="20231221 18:46:26.173" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231221 18:46:23.172" endtime="20231221 18:46:26.173"/>
 </kw>
-<status status="PASS" starttime="20231221 17:51:24.035" endtime="20231221 17:51:43.629"/>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231221 18:46:26.174" level="INFO">Executing JavaScript:
+window.scrollTo(0,document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20231221 18:46:26.173" endtime="20231221 18:46:26.192"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231221 18:46:29.195" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231221 18:46:26.195" endtime="20231221 18:46:29.195"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,-document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231221 18:46:29.196" level="INFO">Executing JavaScript:
+window.scrollTo(0,-document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20231221 18:46:29.196" endtime="20231221 18:46:29.212"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231221 18:46:34.214" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231221 18:46:29.213" endtime="20231221 18:46:34.214"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231221 18:46:34.215" endtime="20231221 18:46:36.939"/>
+</kw>
+<status status="PASS" starttime="20231221 18:46:17.686" endtime="20231221 18:46:36.940"/>
 </test>
-<status status="PASS" starttime="20231221 17:51:23.620" endtime="20231221 17:51:43.631"/>
+<status status="PASS" starttime="20231221 18:46:17.262" endtime="20231221 18:46:36.943"/>
 </suite>
 <statistics>
 <total>
@@ -101,10 +71,10 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="13 Userkeywords">13 Userkeywords</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="14 ScrollingPage">14 ScrollingPage</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20231221 17:51:26.000" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.110); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg timestamp="20231221 18:46:18.881" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.110); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
