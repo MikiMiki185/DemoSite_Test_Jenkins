@@ -1,354 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231221 23:43:56.331" rpa="false" schemaversion="4">
-<suite id="s1" name="15 ForLoopDemo" source="D:\RobotFramework2023_December\1\TestCases\15_ForLoopDemo.robot">
-<test id="s1-t1" name="Forloop1" line="5">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231222 00:20:22.325" rpa="false" schemaversion="4">
+<suite id="s1" name="16 GetAllLinks" source="D:\RobotFramework2023_December\1\TestCases\16_GetAllLinks.robot">
+<test id="s1-t1" name="ScrollingTest" line="5">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://testautomationpractice.blogspot.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231222 00:20:22.722" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<msg timestamp="20231222 00:20:23.856" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.110); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20231222 00:20:22.721" endtime="20231222 00:20:28.763"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231222 00:20:28.764" endtime="20231222 00:20:29.017"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${allelements}</var>
+<arg>xpath://p</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20231222 00:20:29.067" level="INFO">${allelements} = 6</msg>
+<status status="PASS" starttime="20231222 00:20:29.022" endtime="20231222 00:20:29.067"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${allelements}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231222 00:20:29.068" endtime="20231222 00:20:29.070"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>@{LinkItems}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231222 00:20:29.074" level="INFO">@{LinkItems} = [ ]</msg>
+<status status="PASS" starttime="20231222 00:20:29.074" endtime="20231222 00:20:29.074"/>
+</kw>
 <for flavor="IN RANGE">
 <var>${i}</var>
 <value>1</value>
-<value>11</value>
+<value>${allelements} + 1</value>
 <iter>
 <var name="${i}">1</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.747" endtime="20231221 23:43:56.749"/>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${linkText}</var>
+<arg>xpath:(//a)[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231222 00:20:29.111" level="INFO">${linkText} = </msg>
+<status status="PASS" starttime="20231222 00:20:29.076" endtime="20231222 00:20:29.111"/>
 </kw>
-<status status="PASS" starttime="20231221 23:43:56.747" endtime="20231221 23:43:56.749"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i} ${linkText}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231222 00:20:29.111" endtime="20231222 00:20:29.112"/>
+</kw>
+<status status="PASS" starttime="20231222 00:20:29.075" endtime="20231222 00:20:29.112"/>
 </iter>
 <iter>
 <var name="${i}">2</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.749" endtime="20231221 23:43:56.750"/>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${linkText}</var>
+<arg>xpath:(//a)[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231222 00:20:29.138" level="INFO">${linkText} = open cart</msg>
+<status status="PASS" starttime="20231222 00:20:29.112" endtime="20231222 00:20:29.138"/>
 </kw>
-<status status="PASS" starttime="20231221 23:43:56.749" endtime="20231221 23:43:56.750"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i} ${linkText}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231222 00:20:29.138" endtime="20231222 00:20:29.140"/>
+</kw>
+<status status="PASS" starttime="20231222 00:20:29.112" endtime="20231222 00:20:29.140"/>
 </iter>
 <iter>
 <var name="${i}">3</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.750" endtime="20231221 23:43:56.751"/>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${linkText}</var>
+<arg>xpath:(//a)[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231222 00:20:29.164" level="INFO">${linkText} = orange HRM</msg>
+<status status="PASS" starttime="20231222 00:20:29.140" endtime="20231222 00:20:29.164"/>
 </kw>
-<status status="PASS" starttime="20231221 23:43:56.750" endtime="20231221 23:43:56.751"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i} ${linkText}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231222 00:20:29.164" endtime="20231222 00:20:29.165"/>
+</kw>
+<status status="PASS" starttime="20231222 00:20:29.140" endtime="20231222 00:20:29.165"/>
 </iter>
 <iter>
 <var name="${i}">4</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.751" endtime="20231221 23:43:56.753"/>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${linkText}</var>
+<arg>xpath:(//a)[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231222 00:20:29.189" level="INFO">${linkText} = Home</msg>
+<status status="PASS" starttime="20231222 00:20:29.165" endtime="20231222 00:20:29.189"/>
 </kw>
-<status status="PASS" starttime="20231221 23:43:56.751" endtime="20231221 23:43:56.753"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i} ${linkText}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231222 00:20:29.189" endtime="20231222 00:20:29.190"/>
+</kw>
+<status status="PASS" starttime="20231222 00:20:29.165" endtime="20231222 00:20:29.190"/>
 </iter>
 <iter>
 <var name="${i}">5</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.754" endtime="20231221 23:43:56.755"/>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${linkText}</var>
+<arg>xpath:(//a)[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231222 00:20:29.220" level="INFO">${linkText} = Posts (Atom)</msg>
+<status status="PASS" starttime="20231222 00:20:29.190" endtime="20231222 00:20:29.220"/>
 </kw>
-<status status="PASS" starttime="20231221 23:43:56.753" endtime="20231221 23:43:56.755"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i} ${linkText}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231222 00:20:29.220" endtime="20231222 00:20:29.220"/>
+</kw>
+<status status="PASS" starttime="20231222 00:20:29.190" endtime="20231222 00:20:29.220"/>
 </iter>
 <iter>
 <var name="${i}">6</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.756" endtime="20231221 23:43:56.757"/>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${linkText}</var>
+<arg>xpath:(//a)[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231222 00:20:29.246" level="INFO">${linkText} = 1</msg>
+<status status="PASS" starttime="20231222 00:20:29.221" endtime="20231222 00:20:29.246"/>
 </kw>
-<status status="PASS" starttime="20231221 23:43:56.756" endtime="20231221 23:43:56.757"/>
-</iter>
-<iter>
-<var name="${i}">7</var>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
+<arg>${i} ${linkText}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.757" endtime="20231221 23:43:56.758"/>
+<status status="PASS" starttime="20231222 00:20:29.246" endtime="20231222 00:20:29.246"/>
 </kw>
-<status status="PASS" starttime="20231221 23:43:56.757" endtime="20231221 23:43:56.758"/>
+<status status="PASS" starttime="20231222 00:20:29.221" endtime="20231222 00:20:29.246"/>
 </iter>
-<iter>
-<var name="${i}">8</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.758" endtime="20231221 23:43:56.759"/>
-</kw>
-<status status="PASS" starttime="20231221 23:43:56.758" endtime="20231221 23:43:56.759"/>
-</iter>
-<iter>
-<var name="${i}">9</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.759" endtime="20231221 23:43:56.760"/>
-</kw>
-<status status="PASS" starttime="20231221 23:43:56.759" endtime="20231221 23:43:56.760"/>
-</iter>
-<iter>
-<var name="${i}">10</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.760" endtime="20231221 23:43:56.760"/>
-</kw>
-<status status="PASS" starttime="20231221 23:43:56.760" endtime="20231221 23:43:56.760"/>
-</iter>
-<status status="PASS" starttime="20231221 23:43:56.747" endtime="20231221 23:43:56.760"/>
+<status status="PASS" starttime="20231222 00:20:29.075" endtime="20231222 00:20:29.247"/>
 </for>
-<status status="PASS" starttime="20231221 23:43:56.747" endtime="20231221 23:43:56.761"/>
+<status status="PASS" starttime="20231222 00:20:22.720" endtime="20231222 00:20:29.247"/>
 </test>
-<test id="s1-t2" name="Forloop2" line="10">
-<for flavor="IN">
-<var>${i}</var>
-<value>1</value>
-<value>3</value>
-<value>5</value>
-<value>7</value>
-<value>9</value>
-<iter>
-<var name="${i}">1</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.764" endtime="20231221 23:43:56.764"/>
-</kw>
-<status status="PASS" starttime="20231221 23:43:56.764" endtime="20231221 23:43:56.764"/>
-</iter>
-<iter>
-<var name="${i}">3</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.765" endtime="20231221 23:43:56.765"/>
-</kw>
-<status status="PASS" starttime="20231221 23:43:56.765" endtime="20231221 23:43:56.765"/>
-</iter>
-<iter>
-<var name="${i}">5</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.765" endtime="20231221 23:43:56.767"/>
-</kw>
-<status status="PASS" starttime="20231221 23:43:56.765" endtime="20231221 23:43:56.767"/>
-</iter>
-<iter>
-<var name="${i}">7</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.767" endtime="20231221 23:43:56.768"/>
-</kw>
-<status status="PASS" starttime="20231221 23:43:56.767" endtime="20231221 23:43:56.768"/>
-</iter>
-<iter>
-<var name="${i}">9</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.768" endtime="20231221 23:43:56.769"/>
-</kw>
-<status status="PASS" starttime="20231221 23:43:56.768" endtime="20231221 23:43:56.769"/>
-</iter>
-<status status="PASS" starttime="20231221 23:43:56.764" endtime="20231221 23:43:56.769"/>
-</for>
-<status status="PASS" starttime="20231221 23:43:56.763" endtime="20231221 23:43:56.770"/>
-</test>
-<test id="s1-t3" name="Forloop3withList" line="15">
-<kw name="Create List" library="BuiltIn">
-<var>@{items}</var>
-<arg>1</arg>
-<arg>2</arg>
-<arg>3</arg>
-<arg>4</arg>
-<arg>5</arg>
-<doc>Returns a list containing given items.</doc>
-<msg timestamp="20231221 23:43:56.773" level="INFO">@{items} = [ 1 | 2 | 3 | 4 | 5 ]</msg>
-<status status="PASS" starttime="20231221 23:43:56.773" endtime="20231221 23:43:56.773"/>
-</kw>
-<for flavor="IN">
-<var>${i}</var>
-<value>@{items}</value>
-<iter>
-<var name="${i}">1</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.774" endtime="20231221 23:43:56.775"/>
-</kw>
-<status status="PASS" starttime="20231221 23:43:56.774" endtime="20231221 23:43:56.775"/>
-</iter>
-<iter>
-<var name="${i}">2</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.775" endtime="20231221 23:43:56.776"/>
-</kw>
-<status status="PASS" starttime="20231221 23:43:56.775" endtime="20231221 23:43:56.776"/>
-</iter>
-<iter>
-<var name="${i}">3</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.777" endtime="20231221 23:43:56.777"/>
-</kw>
-<status status="PASS" starttime="20231221 23:43:56.776" endtime="20231221 23:43:56.777"/>
-</iter>
-<iter>
-<var name="${i}">4</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.777" endtime="20231221 23:43:56.779"/>
-</kw>
-<status status="PASS" starttime="20231221 23:43:56.777" endtime="20231221 23:43:56.779"/>
-</iter>
-<iter>
-<var name="${i}">5</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.779" endtime="20231221 23:43:56.779"/>
-</kw>
-<status status="PASS" starttime="20231221 23:43:56.779" endtime="20231221 23:43:56.779"/>
-</iter>
-<status status="PASS" starttime="20231221 23:43:56.774" endtime="20231221 23:43:56.779"/>
-</for>
-<status status="PASS" starttime="20231221 23:43:56.772" endtime="20231221 23:43:56.780"/>
-</test>
-<test id="s1-t4" name="Forloop4withList" line="21">
-<kw name="Create List" library="BuiltIn">
-<var>@{items}</var>
-<arg>John</arg>
-<arg>David</arg>
-<arg>Smith</arg>
-<arg>Scott</arg>
-<doc>Returns a list containing given items.</doc>
-<msg timestamp="20231221 23:43:56.784" level="INFO">@{items} = [ John | David | Smith | Scott ]</msg>
-<status status="PASS" starttime="20231221 23:43:56.783" endtime="20231221 23:43:56.784"/>
-</kw>
-<for flavor="IN">
-<var>${i}</var>
-<value>@{items}</value>
-<iter>
-<var name="${i}">John</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.785" endtime="20231221 23:43:56.785"/>
-</kw>
-<status status="PASS" starttime="20231221 23:43:56.785" endtime="20231221 23:43:56.785"/>
-</iter>
-<iter>
-<var name="${i}">David</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.786" endtime="20231221 23:43:56.787"/>
-</kw>
-<status status="PASS" starttime="20231221 23:43:56.786" endtime="20231221 23:43:56.787"/>
-</iter>
-<iter>
-<var name="${i}">Smith</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.787" endtime="20231221 23:43:56.788"/>
-</kw>
-<status status="PASS" starttime="20231221 23:43:56.787" endtime="20231221 23:43:56.788"/>
-</iter>
-<iter>
-<var name="${i}">Scott</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.788" endtime="20231221 23:43:56.789"/>
-</kw>
-<status status="PASS" starttime="20231221 23:43:56.788" endtime="20231221 23:43:56.789"/>
-</iter>
-<status status="PASS" starttime="20231221 23:43:56.785" endtime="20231221 23:43:56.789"/>
-</for>
-<status status="PASS" starttime="20231221 23:43:56.782" endtime="20231221 23:43:56.790"/>
-</test>
-<test id="s1-t5" name="Forloop5withList" line="27">
-<kw name="Create List" library="BuiltIn">
-<var>@{items}</var>
-<arg>1</arg>
-<arg>2</arg>
-<arg>3</arg>
-<arg>4</arg>
-<arg>5</arg>
-<doc>Returns a list containing given items.</doc>
-<msg timestamp="20231221 23:43:56.792" level="INFO">@{items} = [ 1 | 2 | 3 | 4 | 5 ]</msg>
-<status status="PASS" starttime="20231221 23:43:56.792" endtime="20231221 23:43:56.792"/>
-</kw>
-<for flavor="IN">
-<var>${i}</var>
-<value>@{items}</value>
-<iter>
-<var name="${i}">1</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.793" endtime="20231221 23:43:56.794"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>${i}==3</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20231221 23:43:56.794" endtime="20231221 23:43:56.795"/>
-</kw>
-<status status="PASS" starttime="20231221 23:43:56.793" endtime="20231221 23:43:56.795"/>
-</iter>
-<iter>
-<var name="${i}">2</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.795" endtime="20231221 23:43:56.796"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>${i}==3</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20231221 23:43:56.796" endtime="20231221 23:43:56.796"/>
-</kw>
-<status status="PASS" starttime="20231221 23:43:56.795" endtime="20231221 23:43:56.796"/>
-</iter>
-<iter>
-<var name="${i}">3</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231221 23:43:56.796" endtime="20231221 23:43:56.797"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>${i}==3</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<msg timestamp="20231221 23:43:56.798" level="INFO">Exiting for loop altogether.</msg>
-<status status="PASS" starttime="20231221 23:43:56.797" endtime="20231221 23:43:56.800"/>
-</kw>
-<status status="PASS" starttime="20231221 23:43:56.796" endtime="20231221 23:43:56.800"/>
-</iter>
-<status status="PASS" starttime="20231221 23:43:56.793" endtime="20231221 23:43:56.800"/>
-</for>
-<status status="PASS" starttime="20231221 23:43:56.791" endtime="20231221 23:43:56.800"/>
-</test>
-<status status="PASS" starttime="20231221 23:43:56.336" endtime="20231221 23:43:56.803"/>
+<status status="PASS" starttime="20231222 00:20:22.329" endtime="20231222 00:20:29.248"/>
 </suite>
 <statistics>
 <total>
-<stat pass="5" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="5" fail="0" skip="0" id="s1" name="15 ForLoopDemo">15 ForLoopDemo</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="16 GetAllLinks">16 GetAllLinks</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20231222 00:20:23.856" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.110); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
