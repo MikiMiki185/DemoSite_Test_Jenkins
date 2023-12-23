@@ -1,142 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231222 00:20:22.325" rpa="false" schemaversion="4">
-<suite id="s1" name="16 GetAllLinks" source="D:\RobotFramework2023_December\1\TestCases\16_GetAllLinks.robot">
-<test id="s1-t1" name="ScrollingTest" line="5">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231223 00:42:51.126" rpa="false" schemaversion="4">
+<suite id="s1" name="17 TableDemo" source="D:\RobotFramework2023_December\1\TestCases\17_TableDemo.robot">
+<test id="s1-t1" name="TableValidations" line="5">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://testautomationpractice.blogspot.com/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231222 00:20:22.722" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
-<msg timestamp="20231222 00:20:23.856" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.110); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
-<status status="PASS" starttime="20231222 00:20:22.721" endtime="20231222 00:20:28.763"/>
+<msg timestamp="20231223 00:42:51.736" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<msg timestamp="20231223 00:42:53.882" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.110); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20231223 00:42:51.734" endtime="20231223 00:42:58.464"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231222 00:20:28.764" endtime="20231222 00:20:29.017"/>
+<status status="PASS" starttime="20231223 00:42:58.465" endtime="20231223 00:42:58.795"/>
 </kw>
 <kw name="Get Element Count" library="SeleniumLibrary">
-<var>${allelements}</var>
-<arg>xpath://p</arg>
+<var>${rows}</var>
+<arg>xpath: //table[@name='BookTable']/tbody/tr</arg>
 <doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20231222 00:20:29.067" level="INFO">${allelements} = 6</msg>
-<status status="PASS" starttime="20231222 00:20:29.022" endtime="20231222 00:20:29.067"/>
+<msg timestamp="20231223 00:42:58.878" level="INFO">${rows} = 7</msg>
+<status status="PASS" starttime="20231223 00:42:58.811" endtime="20231223 00:42:58.878"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${cols}</var>
+<arg>xpath: //table[@name='BookTable']/tbody/tr[1]/th</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20231223 00:42:58.955" level="INFO">${cols} = 4</msg>
+<status status="PASS" starttime="20231223 00:42:58.891" endtime="20231223 00:42:58.955"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${allelements}</arg>
+<arg>${rows}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231222 00:20:29.068" endtime="20231222 00:20:29.070"/>
+<status status="PASS" starttime="20231223 00:42:58.960" endtime="20231223 00:42:58.962"/>
 </kw>
-<kw name="Create List" library="BuiltIn">
-<var>@{LinkItems}</var>
-<doc>Returns a list containing given items.</doc>
-<msg timestamp="20231222 00:20:29.074" level="INFO">@{LinkItems} = [ ]</msg>
-<status status="PASS" starttime="20231222 00:20:29.074" endtime="20231222 00:20:29.074"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${cols}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231223 00:42:58.962" endtime="20231223 00:42:58.965"/>
 </kw>
-<for flavor="IN RANGE">
-<var>${i}</var>
-<value>1</value>
-<value>${allelements} + 1</value>
-<iter>
-<var name="${i}">1</var>
 <kw name="Get Text" library="SeleniumLibrary">
-<var>${linkText}</var>
-<arg>xpath:(//a)[${i}]</arg>
+<var>${data}</var>
+<arg>xpath://table[@name='BookTable']/tbody/tr[5]/td[1]</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231222 00:20:29.111" level="INFO">${linkText} = </msg>
-<status status="PASS" starttime="20231222 00:20:29.076" endtime="20231222 00:20:29.111"/>
+<msg timestamp="20231223 00:42:59.041" level="INFO">${data} = Master In Selenium</msg>
+<status status="PASS" starttime="20231223 00:42:58.965" endtime="20231223 00:42:59.041"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${i} ${linkText}</arg>
+<arg>${data}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231222 00:20:29.111" endtime="20231222 00:20:29.112"/>
+<status status="PASS" starttime="20231223 00:42:59.045" endtime="20231223 00:42:59.049"/>
 </kw>
-<status status="PASS" starttime="20231222 00:20:29.075" endtime="20231222 00:20:29.112"/>
-</iter>
-<iter>
-<var name="${i}">2</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${linkText}</var>
-<arg>xpath:(//a)[${i}]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231222 00:20:29.138" level="INFO">${linkText} = open cart</msg>
-<status status="PASS" starttime="20231222 00:20:29.112" endtime="20231222 00:20:29.138"/>
+<kw name="Table Column Should Contain" library="SeleniumLibrary">
+<arg>xpath: //*[@id="HTML1"]/div[1]/table</arg>
+<arg>2</arg>
+<arg>Author</arg>
+<doc>Verifies table column contains text ``expected``.</doc>
+<status status="PASS" starttime="20231223 00:42:59.063" endtime="20231223 00:42:59.146"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i} ${linkText}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231222 00:20:29.138" endtime="20231222 00:20:29.140"/>
+<kw name="Table Row Should Contain" library="SeleniumLibrary">
+<arg>xpath: //*[@id="HTML1"]/div[1]/table</arg>
+<arg>4</arg>
+<arg>Learn JS</arg>
+<doc>Verifies that table row contains text ``expected``.</doc>
+<status status="PASS" starttime="20231223 00:42:59.149" endtime="20231223 00:42:59.233"/>
 </kw>
-<status status="PASS" starttime="20231222 00:20:29.112" endtime="20231222 00:20:29.140"/>
-</iter>
-<iter>
-<var name="${i}">3</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${linkText}</var>
-<arg>xpath:(//a)[${i}]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231222 00:20:29.164" level="INFO">${linkText} = orange HRM</msg>
-<status status="PASS" starttime="20231222 00:20:29.140" endtime="20231222 00:20:29.164"/>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>xpath: //*[@id="HTML1"]/div[1]/table</arg>
+<arg>5</arg>
+<arg>2</arg>
+<arg>Mukesh</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20231223 00:42:59.348" level="INFO">Table cell contains 'Mukesh'.</msg>
+<status status="PASS" starttime="20231223 00:42:59.242" endtime="20231223 00:42:59.349"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i} ${linkText}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231222 00:20:29.164" endtime="20231222 00:20:29.165"/>
+<kw name="Table Header Should Contain" library="SeleniumLibrary">
+<arg>xpath: //*[@id="HTML1"]/div[1]/table</arg>
+<arg>BookName</arg>
+<doc>Verifies table header contains text ``expected``.</doc>
+<status status="PASS" starttime="20231223 00:42:59.349" endtime="20231223 00:42:59.416"/>
 </kw>
-<status status="PASS" starttime="20231222 00:20:29.140" endtime="20231222 00:20:29.165"/>
-</iter>
-<iter>
-<var name="${i}">4</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${linkText}</var>
-<arg>xpath:(//a)[${i}]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231222 00:20:29.189" level="INFO">${linkText} = Home</msg>
-<status status="PASS" starttime="20231222 00:20:29.165" endtime="20231222 00:20:29.189"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i} ${linkText}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231222 00:20:29.189" endtime="20231222 00:20:29.190"/>
-</kw>
-<status status="PASS" starttime="20231222 00:20:29.165" endtime="20231222 00:20:29.190"/>
-</iter>
-<iter>
-<var name="${i}">5</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${linkText}</var>
-<arg>xpath:(//a)[${i}]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231222 00:20:29.220" level="INFO">${linkText} = Posts (Atom)</msg>
-<status status="PASS" starttime="20231222 00:20:29.190" endtime="20231222 00:20:29.220"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i} ${linkText}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231222 00:20:29.220" endtime="20231222 00:20:29.220"/>
-</kw>
-<status status="PASS" starttime="20231222 00:20:29.190" endtime="20231222 00:20:29.220"/>
-</iter>
-<iter>
-<var name="${i}">6</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${linkText}</var>
-<arg>xpath:(//a)[${i}]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231222 00:20:29.246" level="INFO">${linkText} = 1</msg>
-<status status="PASS" starttime="20231222 00:20:29.221" endtime="20231222 00:20:29.246"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i} ${linkText}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231222 00:20:29.246" endtime="20231222 00:20:29.246"/>
-</kw>
-<status status="PASS" starttime="20231222 00:20:29.221" endtime="20231222 00:20:29.246"/>
-</iter>
-<status status="PASS" starttime="20231222 00:20:29.075" endtime="20231222 00:20:29.247"/>
-</for>
-<status status="PASS" starttime="20231222 00:20:22.720" endtime="20231222 00:20:29.247"/>
+<status status="PASS" starttime="20231223 00:42:51.733" endtime="20231223 00:42:59.417"/>
 </test>
-<status status="PASS" starttime="20231222 00:20:22.329" endtime="20231222 00:20:29.248"/>
+<status status="PASS" starttime="20231223 00:42:51.130" endtime="20231223 00:42:59.419"/>
 </suite>
 <statistics>
 <total>
@@ -145,10 +90,10 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="16 GetAllLinks">16 GetAllLinks</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="17 TableDemo">17 TableDemo</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20231222 00:20:23.856" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.110); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg timestamp="20231223 00:42:53.882" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.110); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
