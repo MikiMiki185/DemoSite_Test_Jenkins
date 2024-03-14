@@ -1,0 +1,2 @@
+cd D:\RobotFramework2023_December\1
+pybot --processes 4 --outputdir Results  Pabot_Test
