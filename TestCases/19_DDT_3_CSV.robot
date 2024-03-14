@@ -1,14 +1,14 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource    ../Resources/login_resource.robot
-Library     DataDriver  ../TestData/LoginData.xlsx  sheet_name=Arkusz1  # file=TestData/LoginData.xlsx
+Library     DataDriver  file=TestData/LoginDataCSV.csv  encoding=utf-8
 
 Suite Setup       Open my Browser
 Suite Teardown    Close Browsers
 Test Template     Invalid login
 
 *** Test Cases ***
-LoginTestwithExcel      using ${username} and ${password}
+LoginTestwithCsv    using ${username}    ${password}
 
 *** Keywords ***
 Invalid login

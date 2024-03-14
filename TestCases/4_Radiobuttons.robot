@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 
 *** Variables ***
-${browser}  chrome
+${browser}  headlesschrome
 ${url}      https://demoqa.com/automation-practice-form
 #${radio_button}     Get WebElement  id://*[@id="genterWrapper"]/div[2]/div[3]/label
 
